@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+class inside
+{
+    int a,b;
+public:
+    inline void input();
+    inline void show();
+};
+inline void inside::input()
+{
+    cout << "Enter two values: ";
+    cin >> a >> b;
+}
+inline void inside::show()
+{
+    cout << "a = " << a << endl;
+    cout << "b = " << b << endl;
+}
+int main()
+{
+    inside d;
+    d.input();
+    d.show();
+    
+}
