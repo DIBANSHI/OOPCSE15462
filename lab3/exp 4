@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+class Area
+{
+public:
+    // Circle
+    double area(double radius)
+    {
+        return 3.14159 * radius * radius;
+    }
+    // Rectangle
+    double area(double length, double width)
+    {
+        return length * width;
+    }
+    // Square
+    double area(int side)
+    {
+        return side * side;
+    }
+    // Triangle
+    double area(double base, double height, bool triangle)
+    {
+        if (triangle)
+            return 0.5 * base * height;
+
+        return 0;
+    }
+};
+int main()
+{
+    Area a;
+    double r, l, w, b, h;
+    int s;
+    cout << "Enter radius of circle: ";
+    cin >> r;
+    cout << "Area of Circle = " << a.area(r) << endl;
+    cout << "\nEnter length and width of rectangle: ";
+    cin >> l >> w;
+    cout << "Area of Rectangle = " << a.area(l, w) << endl;
+    cout << "\nEnter side of square: ";
+    cin >> s;
+    cout << "Area of Square = " << a.area(s) << endl;
+    cout << "\nEnter base and height of triangle: ";
+    cin >> b >> h;
+    cout << "Area of Triangle = " << a.area(b, h, true) << endl;
+}

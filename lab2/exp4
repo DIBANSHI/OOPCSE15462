@@ -1,0 +1,48 @@
+#include <iostream>
+using namespace std;
+
+// Call by Value
+void byValue(int x)
+{
+    x = x + 10;
+    cout << "Inside Call by Value: " << x << endl;
+}
+
+// Call by Reference
+void byReference(int &x)
+{
+    x = x + 10;
+    cout << "Inside Call by Reference: " << x << endl;
+}
+
+// Call by Address
+void byAddress(int *x)
+{
+    *x = *x + 10;
+    cout << "Inside Call by Address: " << *x << endl;
+}
+
+int main()
+{
+    int a = 10;
+    int b = 10;
+    int c = 10;
+
+    cout << "Before Call by Value: " << a << endl;
+    byValue(a);
+    cout << "After Call by Value: " << a << endl;
+
+    cout << endl;
+
+    cout << "Before Call by Reference: " << b << endl;
+    byReference(b);
+    cout << "After Call by Reference: " << b << endl;
+
+    cout << endl;
+
+    cout << "Before Call by Address: " << c << endl;
+    byAddress(&c);
+    cout << "After Call by Address: " << c << endl;
+
+    return 0;
+}

@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class nemo
+{
+    int a,b;
+public:
+    void input();
+    void show();
+};
+void nemo::input()
+{
+    cout<<"Enter two values: ";
+    if(!(cin>>a>>b))
+    {
+        a=0;
+        b=0;
+    }
+}
+void nemo::show()
+{
+    cout<<"a ="<<a<<endl;
+    cout<<"b = "<<b<<endl;
+}
+int main()
+{
+    nemo d;
+    d.input();
+    d.show();
+}
+
